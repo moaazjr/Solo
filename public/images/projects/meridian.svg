@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1200" width="1600" height="1200">
+<defs>
+<filter id="g"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .07 0"/></filter>
+<linearGradient id="fade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".0"/><stop offset="1" stop-color="#000" stop-opacity=".18"/></linearGradient>
+</defs>
+<rect width="100%" height="100%" fill="#1b1917"/>
+
+    <circle cx="1250" cy="260" r="420" fill="#7a2e3b" opacity=".35"/>
+    
+<g transform="translate(230 230)">
+  <rect width="1140" height="760" rx="10" fill="#24211e" stroke="#3a3530" />
+  <rect width="1140" height="44" rx="10" fill="#3a3530" opacity=".35"/>
+  <circle cx="26" cy="22" r="6" fill="#3a3530"/><circle cx="46" cy="22" r="6" fill="#3a3530"/><circle cx="66" cy="22" r="6" fill="#3a3530"/>
+  
+      <rect x="40" y="90" width="300" height="120" rx="6" fill="#2e2a26"/><rect x="370" y="90" width="300" height="120" rx="6" fill="#2e2a26"/><rect x="700" y="90" width="400" height="120" rx="6" fill="#2e2a26"/>
+      <text x="64" y="160" font-family="Georgia" font-size="46" fill="#f7f4ef">84.2%</text>
+      <text x="394" y="160" font-family="Georgia" font-size="46" fill="#f7f4ef">1,284</text>
+      <polyline points="724,180 780,150 830,165 890,120 950,135 1010,100 1076,112" fill="none" stroke="#e3a9b4" stroke-width="4"/>
+      <polyline points="60,640 160,560 260,590 360,480 460,520 560,400 660,440 760,330 860,380 960,290 1060,310" fill="none" stroke="#e3a9b4" stroke-width="5"/>
+      <polygon points="60,640 160,560 260,590 360,480 460,520 560,400 660,440 760,330 860,380 960,290 1060,310 1060,690 60,690" fill="#e3a9b4" opacity=".12"/>
+      <line x1="40" x2="1100" y1="280" y2="280" stroke="#3a3530"/><line x1="40" x2="1100" y1="380" y2="380" stroke="#3a3530"/><line x1="40" x2="1100" y1="480" y2="480" stroke="#3a3530"/><line x1="40" x2="1100" y1="580" y2="580" stroke="#3a3530"/><line x1="40" x2="1100" y1="680" y2="680" stroke="#3a3530"/>
+    
+</g>
+<rect width="100%" height="100%" fill="url(#fade)"/>
+<rect width="100%" height="100%" filter="url(#g)"/>
+<text x="72" y="1128" font-family="Georgia, serif" font-size="44" fill="currentColor" opacity=".0">Meridian</text>
+</svg>
