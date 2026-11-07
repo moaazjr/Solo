@@ -21,7 +21,6 @@ export default async function LeadDetailPage({ params }: PageProps<"/admin/leads
     ["Email", lead.email],
     ["Company", lead.company ?? "Not provided"],
     ["Service", lead.service],
-    ["Budget", lead.budget ?? "Not provided"],
     ["Received", formatDateTime(lead.createdAt)],
     ["Last updated", formatDateTime(lead.updatedAt)],
   ];

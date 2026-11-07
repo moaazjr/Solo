@@ -9,7 +9,6 @@ export type LeadEmailData = {
   email: string;
   company: string | null;
   serviceLabel: string;
-  budget: string | null;
   message: string;
   createdAt: Date;
 };
@@ -24,7 +23,6 @@ export function leadNotificationEmail(lead: LeadEmailData) {
     ["Email", lead.email],
     ["Company", lead.company || "Not provided"],
     ["Service", lead.serviceLabel],
-    ["Budget", lead.budget || "Not provided"],
     ["Submitted", submitted],
   ];
 

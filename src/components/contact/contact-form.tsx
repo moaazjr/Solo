@@ -6,7 +6,6 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { AnimatePresence, motion } from "framer-motion";
 import { CircleAlert, CircleCheck, LoaderCircle } from "lucide-react";
 import { submitLead } from "@/actions/lead";
-import { budgetOptions } from "@/config/site";
 import { Button } from "@/components/ui/button";
 import { Field, inputClasses } from "@/components/ui/form-field";
 import { GENERAL_ENQUIRY, leadSchema, type LeadInput } from "@/validation/lead";
@@ -33,7 +32,6 @@ export function ContactForm({ services }: { services: ServiceOption[] }) {
       email: "",
       company: "",
       service: "",
-      budget: "",
       message: "",
       website: "",
       startedAt: 0,
@@ -54,7 +52,7 @@ export function ContactForm({ services }: { services: ServiceOption[] }) {
       const result = await submitLead(values);
       if (result.ok) {
         setStatus("success");
-        reset({ ...values, fullName: "", email: "", company: "", message: "", budget: "", startedAt: timestamp() });
+        reset({ ...values, fullName: "", email: "", company: "", message: "", startedAt: timestamp() });
         return;
       }
       setStatus("error");
@@ -177,23 +175,6 @@ export function ContactForm({ services }: { services: ServiceOption[] }) {
                 </select>
               </Field>
             </div>
-
-            <fieldset className="mt-8">
-              <legend className="flex w-full items-baseline justify-between text-sm font-medium">
-                <span>Estimated budget</span>
-                <span className="font-mono text-[0.68rem] uppercase tracking-[0.12em] text-muted">Optional</span>
-              </legend>
-              <div className="mt-3 flex flex-wrap gap-2">
-                {budgetOptions.map((b) => (
-                  <label key={b} className="cursor-pointer">
-                    <input type="radio" value={b} className="peer sr-only" {...register("budget")} />
-                    <span className="inline-block rounded-full border border-line px-4 py-2 text-sm text-muted transition-colors hover:border-ink/40 hover:text-ink peer-checked:border-ink peer-checked:bg-ink peer-checked:text-ivory peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-accent">
-                      {b}
-                    </span>
-                  </label>
-                ))}
-              </div>
-            </fieldset>
 
             <Field id="message" label="Message" error={errors.message?.message} hint="What are you building, and what does success look like?" className="mt-8">
               <textarea

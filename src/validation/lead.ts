@@ -1,5 +1,4 @@
 import { z } from "zod";
-import { budgetOptions } from "@/config/site";
 
 export const GENERAL_ENQUIRY = "general";
 
@@ -13,7 +12,6 @@ export const leadSchema = z.object({
   email: z.email("Please enter a valid email address.").trim().max(254),
   company: z.string().trim().max(120, "Company name must be 120 characters or fewer.").optional().or(z.literal("")),
   service: z.string().trim().min(1, "Please choose a service.").max(100),
-  budget: z.enum(budgetOptions).optional().or(z.literal("")),
   message: z
     .string()
     .trim()

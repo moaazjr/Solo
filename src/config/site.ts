@@ -29,11 +29,3 @@ export const mainNav = [
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ] as const;
-
-export const budgetOptions = [
-  "Under $5,000",
-  "$5,000 – $15,000",
-  "$15,000 – $50,000",
-  "$50,000+",
-  "Not sure yet",
-] as const;

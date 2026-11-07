@@ -20,7 +20,7 @@ export default function PrivacyPage() {
       <p>When you submit our contact form, we collect:</p>
       <ul>
         <li>Your full name and email address</li>
-        <li>Your company name and budget range, if you choose to provide them</li>
+        <li>Your company name, if you choose to provide it</li>
         <li>The service you are interested in and your message</li>
         <li>A one-way cryptographic hash of your IP address and your browser’s user-agent string, used only to prevent spam and abuse</li>
       </ul>

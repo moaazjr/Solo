@@ -60,7 +60,6 @@ export default async function LeadsPage({ searchParams }: PageProps<"/admin/lead
               <tr className="eyebrow text-muted">
                 <th scope="col" className="p-4 font-normal">Name</th>
                 <th scope="col" className="p-4 font-normal">Service</th>
-                <th scope="col" className="p-4 font-normal">Budget</th>
                 <th scope="col" className="p-4 font-normal">Received</th>
                 <th scope="col" className="p-4 font-normal">Status</th>
               </tr>
@@ -75,7 +74,6 @@ export default async function LeadsPage({ searchParams }: PageProps<"/admin/lead
                     <p className="text-muted">{lead.email}</p>
                   </td>
                   <td className="p-4">{lead.service}</td>
-                  <td className="p-4 text-muted">{lead.budget ?? "—"}</td>
                   <td className="whitespace-nowrap p-4 text-muted">{formatDateTime(lead.createdAt)}</td>
                   <td className="p-4">
                     <StatusBadge status={lead.status} />

@@ -37,7 +37,6 @@ export async function submitLead(input: LeadInput): Promise<LeadActionResult> {
     email: data.email.toLowerCase(),
     company: sanitizeText(data.company) || null,
     service: sanitizeText(data.service),
-    budget: data.budget || null,
     message: sanitizeText(data.message),
   };
   if (clean.fullName.length < 2 || clean.message.length < 20) {
