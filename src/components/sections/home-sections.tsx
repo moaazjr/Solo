@@ -274,3 +274,38 @@ export function CtaSection({
     </section>
   );
 }
+
+export function LocalBusinessBand() {
+  return (
+    <section className="px-3 pt-3 sm:px-5 sm:pt-5">
+      <div className="relative isolate overflow-hidden rounded-md bg-ink text-ivory">
+        <div aria-hidden className="absolute -right-24 -top-24 -z-10 size-[420px] rounded-full bg-accent/40 blur-[120px] animate-drift" />
+        <Container className="grid gap-10 py-16 sm:py-20 lg:grid-cols-[1.3fr_1fr] lg:items-center">
+          <Reveal>
+            <Eyebrow tone="light">For local businesses</Eyebrow>
+            <h2 className="display mt-5 text-4xl sm:text-6xl">
+              Own a café, restaurant or shop <em className="text-rose">without a website?</em>
+            </h2>
+            <p className="mt-6 max-w-xl text-lg leading-relaxed text-night-muted">
+              We build beautiful, mobile-first websites for local businesses: your menu or services, opening hours, map and
+              one-tap call and WhatsApp buttons. We handle everything technical.
+            </p>
+          </Reveal>
+          <Reveal delay={0.1} className="flex flex-col gap-3 sm:flex-row lg:flex-col lg:items-end">
+            <ButtonLink href="/local-businesses" variant="inverse" size="lg" arrow>
+              See how it works
+            </ButtonLink>
+            <ButtonLink
+              href="/contact?service=websites-for-local-businesses"
+              size="lg"
+              variant="secondary"
+              className="border-ivory/20 text-ivory hover:border-ivory hover:bg-ivory hover:text-ink"
+            >
+              Get my website
+            </ButtonLink>
+          </Reveal>
+        </Container>
+      </div>
+    </section>
+  );
+}

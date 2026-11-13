@@ -118,3 +118,34 @@ model LoginAttempt {
 
   @@index([ipHash, createdAt])
 }
+
+enum ProspectStatus {
+  NEW
+  CONTACTED
+  INTERESTED
+  WON
+  NOT_INTERESTED
+}
+
+/// A local business without a website, found via OpenStreetMap and saved for outreach.
+model Prospect {
+  id        String         @id @default(cuid())
+  osmKey    String         @unique // e.g. "node/123456"
+  name      String
+  category  String
+  city      String
+  address   String?
+  phone     String?
+  email     String?
+  facebook  String?
+  instagram String?
+  lat       Float
+  lon       Float
+  status    ProspectStatus @default(NEW)
+  notes     String?
+  createdAt DateTime       @default(now())
+  updatedAt DateTime       @updatedAt
+
+  @@index([status])
+  @@index([createdAt])
+}

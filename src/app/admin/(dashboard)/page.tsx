@@ -13,7 +13,7 @@ export default async function AdminOverviewPage() {
   const admin = await requireAdmin();
   const weekAgo = daysAgo(7);
 
-  const [total, byStatus, thisWeek, emailFailures, recent, projects, services] = await Promise.all([
+  const [total, byStatus, thisWeek, emailFailures, recent, projects, services, prospects] = await Promise.all([
     db.lead.count(),
     db.lead.groupBy({ by: ["status"], _count: { _all: true } }),
     db.lead.count({ where: { createdAt: { gte: weekAgo } } }),
@@ -21,6 +21,7 @@ export default async function AdminOverviewPage() {
     db.lead.findMany({ orderBy: { createdAt: "desc" }, take: 6 }),
     db.project.count({ where: { published: true } }),
     db.service.count({ where: { published: true } }),
+    db.prospect.count(),
   ]);
   const count = (s: string) => byStatus.find((b) => b.status === s)?._count._all ?? 0;
 
@@ -85,6 +86,7 @@ export default async function AdminOverviewPage() {
         <aside className="space-y-4">
           <h2 className="display text-3xl">Content</h2>
           {[
+            { label: "Saved prospects", value: prospects, href: "/admin/prospects" },
             { label: "Published projects", value: projects, href: "/admin/projects" },
             { label: "Published services", value: services, href: "/admin/services" },
           ].map((c) => (

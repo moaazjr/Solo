@@ -3,6 +3,7 @@ import {
   CtaSection,
   FeaturedProjects,
   IntroStatement,
+  LocalBusinessBand,
   ProcessSection,
   ServicesOverview,
   StatsBand,
@@ -24,6 +25,7 @@ export default async function HomePage() {
       <JsonLd data={organizationJsonLd()} />
       <Hero />
       <IntroStatement />
+      <LocalBusinessBand />
       <ServicesOverview services={services} />
       <WhyChooseUs />
       <StatsBand />

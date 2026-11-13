@@ -6,6 +6,29 @@ const db = new PrismaClient({ adapter: new PrismaPg({ connectionString: process.
 
 const services = [
   {
+    slug: "websites-for-local-businesses",
+    title: "Websites for Local Businesses",
+    tagline: "Your café, restaurant or shop, finally online.",
+    icon: "Globe",
+    summary: "Beautiful, mobile-first websites for cafés, restaurants, salons, clinics and shops that are not online yet.",
+    description:
+      "Most customers search on their phone before they visit. If your business has no website, they find your competitors instead. We design and launch a fast, professional website for your business: your story, your menu or services, photos, opening hours, a map and one-tap call and WhatsApp buttons. We handle the domain, hosting and setup, so you can focus on running your business.",
+    features: [
+      "A custom design that matches your brand",
+      "Menu, services or product showcase",
+      "Opening hours, location and Google Maps",
+      "One-tap call and WhatsApp buttons",
+      "Mobile-first and fast on any phone",
+      "Domain, hosting and launch handled for you",
+    ],
+    benefits: [
+      "Be found by customers searching online",
+      "Look as professional as the big brands",
+      "Turn visitors into calls, bookings and orders",
+      "A website you own, without technical hassle",
+    ],
+  },
+  {
     slug: "ai-software-development",
     title: "AI-Powered Software Development",
     tagline: "Production software, engineered by agents and owned by a human.",

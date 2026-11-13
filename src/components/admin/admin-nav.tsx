@@ -2,12 +2,13 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Briefcase, FolderKanban, Inbox, LayoutDashboard } from "lucide-react";
+import { Briefcase, FolderKanban, Inbox, LayoutDashboard, MapPin } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const items = [
   { href: "/admin", label: "Overview", icon: LayoutDashboard, exact: true },
   { href: "/admin/leads", label: "Leads", icon: Inbox },
+  { href: "/admin/prospects", label: "Prospects", icon: MapPin },
   { href: "/admin/projects", label: "Projects", icon: FolderKanban },
   { href: "/admin/services", label: "Services", icon: Briefcase },
 ];
